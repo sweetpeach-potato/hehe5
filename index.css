@@ -10,3 +10,50 @@
 @media(min-width:680px){body{background:linear-gradient(130deg,white 35%,var(--light))}.shell{background:white;min-height:100dvh;padding:35px 44px;box-shadow:0 0 80px rgba(161,206,93,.12)}.hero{padding-bottom:35px}.hero h1{font-size:3rem}.sprout{right:25px}.select-panel{padding:23px}.chip{min-height:50px;font-size:1.125rem}.card-list{grid-template-columns:1fr 1fr;align-items:start}.field.hanja .field-value{font-size:2rem}.flip{padding-left:17px}.question-card{min-height:180px}.answer-well{height:330px}.session-shell{max-width:660px}.session-bottom{padding-top:28px}.home-footer{margin-top:24px}}
 @media(max-width:374px){.shell{padding:18px 16px}.hero h1{font-size:2.1875rem}.brand{font-size:1.25rem}.tag{font-size:0.75rem;padding:5px 8px}.select-panel{padding:15px}.hero .sprout{transform:scale(.8);right:-8px}.toolbar{gap:5px}.range-button{padding:9px;font-size:0.8125rem}.toggle-label{font-size:0.75rem}.question-card .field.hanja .field-value{font-size:2.25rem}.question-card{padding:20px}.answer-option{padding:13px}.answer-option .field-value{font-size:1.0625rem}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.shell{width:min(100%,760px)}.session-shell{max-width:660px;touch-action:pan-y}.modal{width:min(calc(100% - 32px),440px)}
+.swipe-guide{padding:15px 8px;text-align:center;border-top:1px solid var(--light);color:var(--muted);touch-action:pan-y}.swipe-guide strong{font-size:1rem;color:var(--ink)}.cover.spring{transition:transform .48s cubic-bezier(.22,1.35,.42,1)}
+.reference-note{display:block;margin-top:9px;font-size:.8125rem;line-height:1.6;color:var(--muted);font-weight:500;word-break:keep-all}
+@media(max-width:679px){.shell{padding-left:16px;padding-right:16px}.toolbar{flex-wrap:wrap;row-gap:12px}.topbar{gap:7px}.brand{font-size:1.2rem}.tag{padding:5px 8px;font-size:.7rem}.session-heading{flex-wrap:wrap}.session-heading h1{font-size:1.5rem}.mode-button{padding:16px 12px}.mode-symbol{right:10px}.question-card .field.hanja .field-value{font-size:2.15rem;letter-spacing:3px}.cover{padding-left:16px;padding-right:16px}.cover-hint small{font-size:.9rem}.hero .sprout{right:-4px;width:80px}.hero h1{font-size:2.2rem}.sound-run{gap:4px 9px}.sound-pair{white-space:normal}.panel-heading h2{font-size:1.1rem}.panel-heading small{font-size:.7rem}.top-title{font-size:1.05rem}}
+.session-shell{user-select:none;-webkit-user-select:none}.answer-option:disabled{pointer-events:none}.session-shell:has(.long-options) .session-bottom p{display:block}
+
+/* 가로 폭은 복원하고, 세로 여백과 학습 영역을 약 20% 압축합니다. */
+.shell{min-height:80dvh;padding-top:19px;padding-bottom:max(19px,env(safe-area-inset-bottom))}
+.topbar{margin-bottom:20px}.hero{padding-top:4px;padding-bottom:18px}.hero p{margin-top:10px}
+.select-panel{padding-top:12px;padding-bottom:12px;margin-bottom:10px}.panel-heading{margin-bottom:9px}.chips{row-gap:6px}
+.selection-summary{margin:12px 0 9px}.primary{min-height:48px}.footer-note{margin-top:12px}
+.mode-grid{margin:18px 0 12px}.mode-button{min-height:83px;padding-top:12px;padding-bottom:12px}.toolbar{padding-bottom:13px}.list-meta{margin:14px 0 9px}.card-list{gap:10px}
+.flip{padding-top:14px;padding-bottom:14px}.study-card:has(.field.sounds) .flip{padding-top:12px;padding-bottom:12px}.revealed{margin-bottom:13px;padding-top:10px}
+.session-shell{min-height:80dvh}.session-shell .topbar{margin-bottom:12px}.progress-line{margin-top:8px}.progress-track{margin:8px 0 14px}
+.question-card{min-height:126px;padding-top:16px;padding-bottom:16px}.session-shell:has(.long-options) .question-card{min-height:96px;padding-top:12px;padding-bottom:12px}
+.session-caption{margin:12px 0 8px}.answer-well{height:clamp(208px,28.8dvh,280px)}.answer-content{padding-top:16px;padding-bottom:16px}
+.cover{padding-top:10px;padding-bottom:16px}.cover-hint strong{margin-bottom:8px}.session-bottom{padding-top:12px}.swipe-guide{padding-top:10px;padding-bottom:10px}.session-bottom p{margin-top:6px}
+.options{gap:9px}.answer-option{min-height:82px;padding-top:12px;padding-bottom:12px}.long-options .answer-option{min-height:60px}.session-shell:has(.long-options) .answer-option{padding-top:9px;padding-bottom:9px}
+.modal-content{padding-top:20px;padding-bottom:20px}.radio-stack{margin:18px 0;gap:8px}.radio-option{padding-top:11px;padding-bottom:11px}.range-setting{margin-bottom:18px}.round-screen{padding-top:64px}
+@media(min-width:680px){.question-card{min-height:144px}.answer-well{height:264px}.home-footer{margin-top:18px}}
+@media(min-width:375px) and (max-width:679px){.shell{padding-left:24px;padding-right:24px}}
+
+/* 브라우저 도구막대를 제외한 실제 가시 높이를 사용합니다. */
+:root{--visible-height:100dvh;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.session-shell:has(.answer-well){height:min(720px,var(--visible-height));min-height:0;padding-top:max(10px,env(safe-area-inset-top));padding-bottom:max(12px,env(safe-area-inset-bottom))}
+.session-shell:has(.answer-well)>*{flex-shrink:0}
+.session-shell:has(.answer-well) .topbar{margin-bottom:8px}
+.session-shell:has(.answer-well) .question-card{min-height:90px;max-height:140px;overflow:auto;padding-top:12px;padding-bottom:12px}
+.session-shell:has(.answer-well) .answer-well{flex:1 1 240px;min-height:150px;max-height:280px;height:auto}
+.session-shell:has(.answer-well) .session-bottom{margin-top:0;padding-top:8px}
+.session-shell:has(.answer-well) .swipe-guide{padding-top:8px;padding-bottom:0}
+.short-viewport .session-shell:has(.answer-well) .session-heading{min-height:29px}
+.short-viewport .session-shell:has(.answer-well) .progress-line{margin-top:3px}
+.short-viewport .session-shell:has(.answer-well) .progress-track{margin:5px 0 9px;height:5px}
+.short-viewport .session-shell:has(.answer-well) .question-card{max-height:108px;padding-top:8px;padding-bottom:8px}
+.short-viewport .session-shell:has(.answer-well) .session-caption{margin:8px 0 6px}
+.short-viewport .cover-hint{line-height:1.35}.short-viewport .cover-hint strong{font-size:1.2rem;line-height:1.25;margin-bottom:6px}.short-viewport .cover-hint small{line-height:1.4}
+.short-viewport .session-shell:has(.answer-well) .session-bottom p{margin-top:3px}
+.session-shell .question-card{touch-action:pan-y}
+/* 짧은 화면에서 홈 시작 버튼과 리콜 마지막 보기도 가리지 않게 합니다. */
+.short-viewport body[data-view=home] .topbar{margin-bottom:10px}
+.short-viewport .hero{padding-bottom:12px}.short-viewport .hero h1{font-size:1.85rem}.short-viewport .hero h1 br{display:none}.short-viewport .hero .sprout{display:none}
+.short-viewport .hero p{margin-top:7px}.short-viewport .select-panel{padding-top:9px;padding-bottom:9px;margin-bottom:8px}.short-viewport .selection-summary{margin:8px 0}
+.short-viewport .session-shell .topbar{margin-bottom:8px}.short-viewport .session-shell .progress-line{margin-top:3px}.short-viewport .session-shell .progress-track{margin:5px 0 9px}
+.short-viewport .session-shell:has(.long-options) .question-card{min-height:80px;padding:8px 12px}.short-viewport .session-shell .session-caption{margin:8px 0 6px}
+.session-shell:has(.long-options) .session-bottom{position:static}
